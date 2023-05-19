@@ -1,4 +1,4 @@
-# Khrulenko Vitalii's FreySoft
+# Khrulenko Vitalii's FreySoft test task
 
 [LINK TO APP PREVIEW](https://khrulenko.github.io/freysoft_expense_tracker/)
 
@@ -15,3 +15,4 @@ Used technologies:
 - Redux
   - toolkit
 - Material UI
+- ESLint
