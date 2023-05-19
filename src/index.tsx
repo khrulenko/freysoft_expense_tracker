@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import App from './App';
 import theme from './ui/styles/theme';
@@ -12,7 +13,9 @@ root.render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </ThemeProvider>
   </Provider>
 );

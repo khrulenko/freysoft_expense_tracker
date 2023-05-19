@@ -22,6 +22,7 @@ module.exports = {
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/jsx-key": "error",
+    "@typescript-eslint/no-inferrable-types": "off",
     "max-len": [
       "warn",
       {
