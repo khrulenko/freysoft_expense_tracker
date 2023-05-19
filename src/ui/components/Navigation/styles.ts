@@ -4,6 +4,7 @@ import { StyleFunction } from '../../../common/types';
 const createWrapperStyles: StyleFunction<PaperProps> = () => ({
   position: 'absolute',
   bottom: 0,
+  left: 0,
 
   width: '100%',
 });

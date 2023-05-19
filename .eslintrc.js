@@ -23,10 +23,12 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "react/jsx-key": "error",
     "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-empty-interface": 'off',
     "max-len": [
       "warn",
       {
         "code": 80,
+        ignorePattern: '^import\\s.+\\sfrom\\s.+;$'
       }
     ],
   }

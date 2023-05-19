@@ -10,6 +10,7 @@ const createWrapperStyles: StyleFunction<PaperProps> = () => ({
   width: '100%',
   maxWidth: '414px',
   height: '100%',
+  padding: '47px 27px',
 
   borderRadius: '30px',
 
