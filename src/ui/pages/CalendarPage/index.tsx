@@ -1,7 +1,12 @@
 import PageLayout from '../../layouts/PageLayout';
+import BuildingPageWarning from '../BuildingPageWarning';
 
 const CalendarPage = () => {
-  return <PageLayout>Calendar Page</PageLayout>;
+  return (
+    <PageLayout>
+      <BuildingPageWarning />
+    </PageLayout>
+  );
 };
 
 export default CalendarPage;

@@ -1,7 +1,12 @@
 import PageLayout from '../../layouts/PageLayout';
+import BuildingPageWarning from '../BuildingPageWarning';
 
 const NewPage = () => {
-  return <PageLayout>New Page</PageLayout>;
+  return (
+    <PageLayout>
+      <BuildingPageWarning />
+    </PageLayout>
+  );
 };
 
 export default NewPage;
