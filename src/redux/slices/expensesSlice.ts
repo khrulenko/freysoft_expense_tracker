@@ -1,17 +1,17 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { expensesMock } from '../../common/mocks';
 import { createSelector } from '../../common/utils';
 
-interface Expense {
+export interface Expense {
   id: string;
   amount: number;
   date: string;
-  sender: string;
   recipient: string;
 }
 
 export type Expenses = Expense[];
 
-const initialState: Expenses = [];
+const initialState: Expenses = expensesMock;
 
 const expensesSlice = createSlice({
   name: 'expenses',
@@ -28,6 +28,6 @@ const expensesSlice = createSlice({
   },
 });
 
-export const getCities = createSelector('expenses');
+export const getExpenses = createSelector('expenses');
 export const { addExpenses } = expensesSlice.actions;
 export default expensesSlice.reducer;

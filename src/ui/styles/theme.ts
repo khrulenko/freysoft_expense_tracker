@@ -21,6 +21,9 @@ const palette: PaletteOptions = {
   secondary: {
     main: '#FF643B',
   },
+  success: {
+    main: '#2BB272',
+  },
   text: {
     primary: '#000000',
     secondary: '#A3A3A3',

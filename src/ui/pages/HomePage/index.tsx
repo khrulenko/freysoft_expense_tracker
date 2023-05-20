@@ -1,5 +1,6 @@
 import AnalyticsSection from '../../components/AnalyticsSection';
 import BankCard from '../../components/BankCard';
+import TransactionsSection from '../../components/TransactionsSection';
 import PageLayout from '../../layouts/PageLayout';
 
 const HomePage = () => {
@@ -8,6 +9,8 @@ const HomePage = () => {
       <BankCard />
 
       <AnalyticsSection />
+
+      <TransactionsSection />
     </PageLayout>
   );
 };

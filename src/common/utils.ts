@@ -24,4 +24,14 @@ const getHeaderByUrl = (url: string): string => {
   return pagesHeaders[url];
 };
 
-export { createSelector, getHeaderByUrl };
+const getDateFromISO = (date: string) => {
+  const dateObj = new Date(date);
+  const year = dateObj.getFullYear();
+  const month = dateObj.toLocaleString('en-US', { month: 'long' });
+  const day = dateObj.toLocaleString('en-US', { day: '2-digit' });
+  const weekday = dateObj.toLocaleString('en-US', { weekday: 'short' });
+
+  return `${weekday}, ${day} ${month} ${year}`;
+};
+
+export { createSelector, getHeaderByUrl, getDateFromISO };
