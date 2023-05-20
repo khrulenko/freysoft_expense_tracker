@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "./static/js/main.feb10a79.js",
+    "static/media/bell.svg": "./static/media/bell.c38b0c74b8561c99488f944b1f16a2e0.svg",
+    "index.html": "./index.html",
+    "static/media/downArrow.svg": "./static/media/downArrow.cf29efe2403e6b746816150d61ff574e.svg",
+    "main.feb10a79.js.map": "./static/js/main.feb10a79.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.feb10a79.js"
+  ]
+}
