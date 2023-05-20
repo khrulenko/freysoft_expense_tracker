@@ -1,11 +1,12 @@
-import Section from '../../layouts/Section';
+import SectionLayout from '../../layouts/SectionLayout';
+import Chart from '../Chart';
 import ChooseYearButton from '../ChooseYearButton';
 
 const AnalyticsSection = () => {
   return (
-    <Section header="Analytics" action={<ChooseYearButton />}>
-      <>chart</>
-    </Section>
+    <SectionLayout header="Analytics" action={<ChooseYearButton />}>
+      <Chart />
+    </SectionLayout>
   );
 };
 

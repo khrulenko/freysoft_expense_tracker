@@ -1,6 +1,10 @@
 import { ReactNode } from 'react';
 import { Stack, Typography, Button, styled } from '@mui/material';
-import { createDefaultButtonStyles, createHeaderStyles } from './styles';
+import {
+  createDefaultButtonStyles,
+  createHeaderStyles,
+  createTittleStyles,
+} from './styles';
 
 interface Props {
   header: string;
@@ -9,24 +13,25 @@ interface Props {
 }
 
 const DefaultButton = styled(Button)(createDefaultButtonStyles);
-const Header = styled(Typography)(createHeaderStyles);
+const Header = styled(Stack)(createHeaderStyles);
+const Tittle = styled(Typography)(createTittleStyles);
 
-const Section = ({
+const SectionLayout = ({
   header,
   action = <DefaultButton>View All</DefaultButton>,
   children,
 }: Props) => {
   return (
     <Stack>
-      <Stack direction="row" justifyContent="space-between">
-        <Header>{header}</Header>
+      <Header>
+        <Tittle>{header}</Tittle>
 
         {action}
-      </Stack>
+      </Header>
 
       {children}
     </Stack>
   );
 };
 
-export default Section;
+export default SectionLayout;
