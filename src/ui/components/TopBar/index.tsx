@@ -17,7 +17,7 @@ const TopBar = ({ header }: TopBarProps) => {
         <PersonIcon />
       </AccAvatar>
 
-      <Typography variant="h5" fontWeight="500">
+      <Typography variant="h5" fontWeight="500" color="common.black">
         {header}
       </Typography>
 

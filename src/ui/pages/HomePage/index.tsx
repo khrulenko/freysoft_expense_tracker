@@ -1,7 +1,12 @@
+import BankCard from '../../components/BankCard';
 import PageLayout from '../../layouts/PageLayout';
 
 const HomePage = () => {
-  return <PageLayout>Home Page</PageLayout>;
+  return (
+    <PageLayout>
+      <BankCard />
+    </PageLayout>
+  );
 };
 
 export default HomePage;

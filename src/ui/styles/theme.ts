@@ -21,7 +21,7 @@ const palette: PaletteOptions = {
     main: '#FF643B',
   },
   text: {
-    primary: '#000000',
+    primary: '#FAFAFA',
     secondary: '#A3A3A3',
   },
 };
