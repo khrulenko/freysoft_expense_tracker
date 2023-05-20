@@ -22,7 +22,7 @@ const palette: PaletteOptions = {
     main: '#FF643B',
   },
   text: {
-    primary: '#FAFAFA',
+    primary: '#000000',
     secondary: '#A3A3A3',
   },
 };

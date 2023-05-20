@@ -8,6 +8,7 @@ const createTextWrapperStyles: StyleFunction<TypographyProps> = ({
   gap: '16px',
 
   color: palette.text.secondary,
+  fontWeight: '500',
 });
 
 export { createTextWrapperStyles };

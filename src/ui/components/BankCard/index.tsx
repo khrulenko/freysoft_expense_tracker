@@ -15,7 +15,7 @@ const BankCard = () => {
       <CardWrapper>
         <Stack direction="row" justifyContent="space-between">
           <Stack gap="16px">
-            <Typography fontSize="18px" lineHeight="21px">
+            <Typography fontSize="18px" lineHeight="21px" color="grey.50">
               Total Balance
             </Typography>
 

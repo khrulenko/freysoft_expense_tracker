@@ -1,7 +1,9 @@
 import { StackProps } from '@mui/material';
 import { StyleFunction } from '../../../common/types';
 
-const createCardWrapperStyles: StyleFunction<StackProps> = () => ({
+const createCardWrapperStyles: StyleFunction<StackProps> = ({
+  theme: { palette },
+}) => ({
   position: 'relative',
   gap: '40px',
 
@@ -9,6 +11,7 @@ const createCardWrapperStyles: StyleFunction<StackProps> = () => ({
 
   borderRadius: '24px',
   background: '#2F3046',
+  color: palette.common.white,
 });
 
 const createBackCardStyles: StyleFunction<StackProps> = () => ({
