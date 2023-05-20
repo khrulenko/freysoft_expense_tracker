@@ -4,7 +4,7 @@ import ChooseYearButton from '../ChooseYearButton';
 
 const AnalyticsSection = () => {
   return (
-    <SectionLayout header="Analytics" action={<ChooseYearButton />}>
+    <SectionLayout tittle="Analytics" action={<ChooseYearButton />}>
       <Chart />
     </SectionLayout>
   );

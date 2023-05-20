@@ -7,7 +7,7 @@ import {
 } from './styles';
 
 interface Props {
-  header: string;
+  tittle: string;
   action?: ReactNode;
   children: ReactNode;
 }
@@ -17,14 +17,14 @@ const Header = styled(Stack)(createHeaderStyles);
 const Tittle = styled(Typography)(createTittleStyles);
 
 const SectionLayout = ({
-  header,
+  tittle,
   action = <DefaultButton>View All</DefaultButton>,
   children,
 }: Props) => {
   return (
     <Stack>
       <Header>
-        <Tittle>{header}</Tittle>
+        <Tittle>{tittle}</Tittle>
 
         {action}
       </Header>
