@@ -1,9 +1,10 @@
-import { StackProps, TypographyProps } from '@mui/material';
+import { ButtonProps, StackProps, TypographyProps } from '@mui/material';
 import { StyleFunction } from '../../../common/types';
 
 const createWrapperStyles: StyleFunction<StackProps> = ({
   theme: { palette },
 }) => ({
+  position: 'relative',
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -34,4 +35,30 @@ const createDateStyles: StyleFunction<TypographyProps> = ({
   whiteSpace: 'nowrap',
 });
 
-export { createWrapperStyles, createAmountStyles, createDateStyles };
+const createDeleteButtonStyles: StyleFunction<ButtonProps> = ({
+  theme: { palette },
+}) => ({
+  position: 'absolute',
+  right: 0,
+
+  width: '100px',
+  height: '100%',
+
+  textAlign: 'center',
+  color: palette.common.white,
+
+  borderTopLeftRadius: '0',
+  borderBottomLeftRadius: '0',
+  backgroundColor: palette.error.main,
+
+  '&:hover': {
+    backgroundColor: palette.error.light,
+  },
+});
+
+export {
+  createWrapperStyles,
+  createAmountStyles,
+  createDateStyles,
+  createDeleteButtonStyles,
+};

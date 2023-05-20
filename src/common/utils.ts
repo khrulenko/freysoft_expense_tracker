@@ -1,3 +1,5 @@
+import { ChangeEvent } from 'react';
+import dayjs from 'dayjs';
 import { State } from '../redux/store';
 import {
   URL_CALENDAR,
@@ -6,6 +8,7 @@ import {
   URL_NEW,
   URL_SETTINGS,
 } from '../routes/URLs';
+import { AnyFunction } from './types';
 
 const createSelector =
   <K extends keyof State>(dataField: K) =>
@@ -24,14 +27,13 @@ const getHeaderByUrl = (url: string): string => {
   return pagesHeaders[url];
 };
 
-const getDateFromISO = (date: string) => {
-  const dateObj = new Date(date);
-  const year = dateObj.getFullYear();
-  const month = dateObj.toLocaleString('en-US', { month: 'long' });
-  const day = dateObj.toLocaleString('en-US', { day: '2-digit' });
-  const weekday = dateObj.toLocaleString('en-US', { weekday: 'short' });
+const getDateStringFromISO = (date: string): string =>
+  dayjs(date).format('ddd, DD MMMM YYYY');
 
-  return `${weekday}, ${day} ${month} ${year}`;
-};
+const handleChange =
+  (action: AnyFunction) =>
+  ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
+    action(value);
+  };
 
-export { createSelector, getHeaderByUrl, getDateFromISO };
+export { createSelector, getHeaderByUrl, getDateStringFromISO, handleChange };

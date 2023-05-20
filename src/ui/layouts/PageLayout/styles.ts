@@ -6,7 +6,7 @@ const createWrapperStyles: StyleFunction<StackProps> = ({
 }) => ({
   gap: '32px',
 
-  paddingTop: '36px',
+  paddingTop: '24px',
   paddingBottom: `${navBarSizes.height + 8}px`,
 
   overflowX: 'hidden',

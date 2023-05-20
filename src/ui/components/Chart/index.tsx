@@ -44,7 +44,7 @@ const chartData: ChartItemData[] = [
 const Wrapper = styled(Stack)(createWrapperStyles);
 
 const Chart = () => {
-  const [chosenMonth, setChosenMonth] = useState('Mar');
+  const [chosenMonth, setChosenMonth] = useState<string>('Mar');
 
   return (
     <Wrapper>

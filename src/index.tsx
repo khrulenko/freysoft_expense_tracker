@@ -2,6 +2,9 @@ import { Provider } from 'react-redux';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import 'dayjs/locale/en-gb';
 import App from './App';
 import theme from './ui/styles/theme';
 import store from './redux/store';
@@ -14,7 +17,9 @@ root.render(
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
-        <App />
+        <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="en-gb">
+          <App />
+        </LocalizationProvider>
       </BrowserRouter>
     </ThemeProvider>
   </Provider>

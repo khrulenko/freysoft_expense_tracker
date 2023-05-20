@@ -1,0 +1,3 @@
+const APP_DATE_FORMAT = 'YYYY-MM-DD';
+
+export { APP_DATE_FORMAT };

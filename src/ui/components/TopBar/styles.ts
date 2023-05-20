@@ -6,6 +6,8 @@ const createWrapperStyles: StyleFunction<StackProps> = () => ({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
+
+  paddingBottom: '12px',
 });
 
 const createAccAvatarStyles: StyleFunction<AvatarProps> = ({
