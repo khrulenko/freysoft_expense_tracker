@@ -1,6 +1,7 @@
 import { createTheme, PaletteOptions, ThemeOptions } from '@mui/material';
 import MuiCssBaseline from './muiComponents/MuiCssBaseline';
 import MuiBottomNavigationAction from './muiComponents/MuiBottomNavigationAction';
+import MuiButton from './muiComponents/MuiButton';
 
 interface CustomThemeProps {
   navBarSizes: {
@@ -32,6 +33,7 @@ const theme = createTheme({
   components: {
     MuiCssBaseline,
     MuiBottomNavigationAction,
+    MuiButton,
   },
   navBarSizes,
 } as ThemeOptions);
