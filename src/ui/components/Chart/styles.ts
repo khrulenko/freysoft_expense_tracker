@@ -1,7 +1,7 @@
-import { ButtonProps } from '@mui/material';
+import { StackProps } from '@mui/material';
 import { StyleFunction } from '../../../common/types';
 
-const createWrapperStyles: StyleFunction<ButtonProps> = () => ({
+const createWrapperStyles: StyleFunction<StackProps> = () => ({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'flex-end',

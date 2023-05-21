@@ -15,4 +15,5 @@ Used technologies:
 - Redux
   - toolkit
 - Material UI
+- Day.js
 - ESLint

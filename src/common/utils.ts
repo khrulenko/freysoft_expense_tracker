@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
 import { State } from '../redux/store';
 import {
   URL_CALENDAR,
@@ -8,7 +8,7 @@ import {
   URL_NEW,
   URL_SETTINGS,
 } from '../routes/URLs';
-import { AnyFunction } from './types';
+import { AnyFunction, DatesOfWeek } from './types';
 
 const createSelector =
   <K extends keyof State>(dataField: K) =>
@@ -36,4 +36,26 @@ const handleChange =
     action(value);
   };
 
-export { createSelector, getHeaderByUrl, getDateStringFromISO, handleChange };
+const getDatesOfWeek = (startOfWeek: Dayjs): DatesOfWeek => {
+  const dates: DatesOfWeek = [];
+
+  for (let index = 0; index < 7; index++) {
+    const dayOfWeek = startOfWeek.add(index, 'day');
+    const dayLetter = dayOfWeek.format('dd').at(0);
+    const date = dayOfWeek.format('D');
+
+    if (dayLetter && date) {
+      dates.push([dayLetter, date]);
+    }
+  }
+
+  return dates;
+};
+
+export {
+  createSelector,
+  getHeaderByUrl,
+  getDateStringFromISO,
+  handleChange,
+  getDatesOfWeek,
+};
