@@ -19,20 +19,34 @@ const createBalanceInfoStyles: StyleFunction<StackProps> = () => ({
 });
 
 const createTittleStyles: StyleFunction<TypographyProps> = ({
-  theme: { palette },
+  theme: {
+    palette,
+    breakpoints: { down },
+  },
 }) => ({
   fontWeight: '500',
   lineHeight: '19px',
   color: palette.grey[50],
+
+  [down('ms')]: {
+    fontSize: '12px',
+  },
 });
 
 const createAmountStyles: StyleFunction<TypographyProps> = ({
-  theme: { palette },
+  theme: {
+    palette,
+    breakpoints: { down },
+  },
 }) => ({
   fontSize: '27px',
   fontWeight: '700',
   lineHeight: '32px',
   color: palette.common.white,
+
+  [down('ms')]: {
+    fontSize: '16px',
+  },
 });
 
 const createCardIconStyles: StyleFunction<IconProps> = ({
@@ -62,9 +76,17 @@ const createCardInfoStyles: StyleFunction<StackProps> = ({
   borderTopLeftRadius: '10px',
 });
 
-const createDescriptionStyles: StyleFunction<TypographyProps> = () => ({
+const createDescriptionStyles: StyleFunction<TypographyProps> = ({
+  theme: {
+    breakpoints: { down },
+  },
+}) => ({
   fontSize: '14px',
   lineHeight: '16px',
+
+  [down('ms')]: {
+    fontSize: '12px',
+  },
 });
 
 const createCardNumberStyles: StyleFunction<TypographyProps> = ({

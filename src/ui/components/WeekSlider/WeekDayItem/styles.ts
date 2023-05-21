@@ -3,6 +3,9 @@ import { DateProps, StylingProps } from '.';
 import { StyleFunction } from '../../../../common/types';
 
 const createWrapperStyles: StyleFunction<StackProps & StylingProps> = ({
+  theme: {
+    breakpoints: { down },
+  },
   isChosen,
 }) => ({
   gap: '14px',
@@ -15,10 +18,17 @@ const createWrapperStyles: StyleFunction<StackProps & StylingProps> = ({
   lineHeight: '19px',
 
   cursor: 'pointer',
+
+  [down('ms')]: {
+    width: '24px',
+  },
 });
 
 const createDateStyles: StyleFunction<StackProps & DateProps> = ({
-  theme: { palette },
+  theme: {
+    palette,
+    breakpoints: { down },
+  },
   isChosen,
   showMark,
 }) => ({
@@ -46,6 +56,10 @@ const createDateStyles: StyleFunction<StackProps & DateProps> = ({
 
     borderRadius: '50%',
     backgroundColor: isChosen ? palette.common.white : palette.text.secondary,
+  },
+
+  [down('ms')]: {
+    width: '24px',
   },
 });
 
