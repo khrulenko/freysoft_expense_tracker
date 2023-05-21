@@ -1,6 +1,10 @@
 import { Avatar, Stack, styled, Typography } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
-import { createWrapperStyles, createAccAvatarStyles } from './styles';
+import {
+  createWrapperStyles,
+  createAccAvatarStyles,
+  createHeaderStyles,
+} from './styles';
 import { ReactComponent as BellIcon } from '../../icons/bell.svg';
 
 interface TopBarProps {
@@ -9,6 +13,7 @@ interface TopBarProps {
 
 const Wrapper = styled(Stack)(createWrapperStyles);
 const AccAvatar = styled(Avatar)(createAccAvatarStyles);
+const Header = styled(Typography)(createHeaderStyles);
 
 const TopBar = ({ header }: TopBarProps) => {
   return (
@@ -17,9 +22,7 @@ const TopBar = ({ header }: TopBarProps) => {
         <PersonIcon />
       </AccAvatar>
 
-      <Typography variant="h5" fontWeight="500" color="common.black">
-        {header}
-      </Typography>
+      <Header>{header}</Header>
 
       <BellIcon />
     </Wrapper>

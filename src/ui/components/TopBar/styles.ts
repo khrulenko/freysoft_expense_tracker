@@ -1,4 +1,4 @@
-import { StackProps, AvatarProps } from '@mui/material';
+import { StackProps, AvatarProps, TypographyProps } from '@mui/material';
 import { StyleFunction } from '../../../common/types';
 
 const createWrapperStyles: StyleFunction<StackProps> = () => ({
@@ -20,4 +20,12 @@ const createAccAvatarStyles: StyleFunction<AvatarProps> = ({
   background: palette.primary.main,
 });
 
-export { createWrapperStyles, createAccAvatarStyles };
+const createHeaderStyles: StyleFunction<TypographyProps> = ({
+  theme: { palette },
+}) => ({
+  fontSize: '24px',
+  fontWeight: '500',
+  color: palette.common.black,
+});
+
+export { createWrapperStyles, createAccAvatarStyles, createHeaderStyles };
