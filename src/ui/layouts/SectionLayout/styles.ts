@@ -1,4 +1,4 @@
-import { ButtonProps, StackProps } from '@mui/material';
+import { ButtonProps, StackProps, TypographyProps } from '@mui/material';
 import { StyleFunction } from '../../../common/types';
 
 const createDefaultButtonStyles: StyleFunction<ButtonProps> = ({
@@ -16,7 +16,7 @@ const createHeaderStyles: StyleFunction<StackProps> = () => ({
   paddingBottom: '24px',
 });
 
-const createTittleStyles: StyleFunction<ButtonProps> = ({
+const createTittleStyles: StyleFunction<TypographyProps> = ({
   theme: { palette },
 }) => ({
   color: palette.common.black,
