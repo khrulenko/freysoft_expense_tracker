@@ -52,10 +52,14 @@ const getDatesOfWeek = (startOfWeek: Dayjs): DatesOfWeek => {
   return dates;
 };
 
+const getAmount = (strAmount: string): number =>
+  Number(strAmount.replace(',', ''));
+
 export {
   createSelector,
   getHeaderByUrl,
   getDateStringFromISO,
   handleChange,
   getDatesOfWeek,
+  getAmount,
 };

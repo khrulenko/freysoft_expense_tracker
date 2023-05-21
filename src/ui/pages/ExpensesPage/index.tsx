@@ -2,6 +2,7 @@ import { Stack } from '@mui/material/';
 import Balance from '../../components/Balance';
 import WeekSlider from '../../components/WeekSlider';
 import PageLayout from '../../layouts/PageLayout';
+import ExpensesSection from '../../sections/ExpencesSection';
 
 const ExpensesPage = () => {
   return (
@@ -13,6 +14,8 @@ const ExpensesPage = () => {
 
         <Balance colorSystem="secondary" />
       </Stack>
+
+      <ExpensesSection />
     </PageLayout>
   );
 };

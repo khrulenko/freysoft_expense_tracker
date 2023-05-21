@@ -1,6 +1,6 @@
-import AnalyticsSection from '../../Sections/AnalyticsSection';
+import AnalyticsSection from '../../sections/AnalyticsSection';
 import BankCard from '../../components/BankCard';
-import TransactionsSection from '../../Sections/TransactionsSection';
+import TransactionsSection from '../../sections/TransactionsSection';
 import PageLayout from '../../layouts/PageLayout';
 
 const HomePage = () => {

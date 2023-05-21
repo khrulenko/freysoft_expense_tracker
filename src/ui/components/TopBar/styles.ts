@@ -2,7 +2,6 @@ import { StackProps, AvatarProps, TypographyProps } from '@mui/material';
 import { StyleFunction } from '../../../common/types';
 
 const createWrapperStyles: StyleFunction<StackProps> = () => ({
-  display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
