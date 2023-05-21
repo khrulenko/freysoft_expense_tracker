@@ -5,11 +5,11 @@ import {
   BottomNavigationAction,
   styled,
 } from '@mui/material';
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
-import CreditCardRoundedIcon from '@mui/icons-material/CreditCardRounded';
-import AddCircleRoundedIcon from '@mui/icons-material/AddCircleRounded';
 import CalendarTodayOutlinedIcon from '@mui/icons-material/CalendarTodayOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import { ReactComponent as HomeIcon } from '../../icons/homeIcon.svg';
+import { ReactComponent as CardIcon } from '../../icons/cardIcon.svg';
+import { ReactComponent as NewIcon } from '../../icons/newIcon.svg';
 import { createWrapperStyles, createNavWrapperStyles } from './styles';
 import {
   URL_CALENDAR,
@@ -23,9 +23,12 @@ const Wrapper = styled(Paper)(createWrapperStyles);
 const NavWrapper = styled(BottomNavigation)(createNavWrapperStyles);
 
 const navButtons = [
-  { url: URL_HOME, icon: <HomeRoundedIcon fontSize="large" /> },
-  { url: URL_EXPENSES, icon: <CreditCardRoundedIcon fontSize="large" /> },
-  { url: URL_NEW, icon: <AddCircleRoundedIcon fontSize="inherit" /> },
+  { url: URL_HOME, icon: <HomeIcon /> },
+  {
+    url: URL_EXPENSES,
+    icon: <CardIcon width={28} height={22} />,
+  },
+  { url: URL_NEW, icon: <NewIcon /> },
   { url: URL_CALENDAR, icon: <CalendarTodayOutlinedIcon /> },
   { url: URL_SETTINGS, icon: <SettingsOutlinedIcon /> },
 ];

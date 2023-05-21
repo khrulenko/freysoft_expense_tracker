@@ -1,7 +1,7 @@
 import { Avatar, Stack, styled, Typography } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import { createWrapperStyles, createAccAvatarStyles } from './styles';
-import { ReactComponent as BellIcon } from './bell.svg';
+import { ReactComponent as BellIcon } from '../../icons/bell.svg';
 
 interface TopBarProps {
   header: string;

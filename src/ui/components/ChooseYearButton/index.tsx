@@ -1,5 +1,5 @@
 import { Button, Stack, styled } from '@mui/material';
-import { ReactComponent as DownArrow } from './downArrow.svg';
+import { ReactComponent as DownArrow } from '../../icons/downArrow.svg';
 import { createButtonWrapperStyles } from './styles';
 
 const ButtonWrapper = styled(Button)(createButtonWrapperStyles);

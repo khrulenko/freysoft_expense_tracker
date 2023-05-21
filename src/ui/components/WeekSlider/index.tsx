@@ -7,8 +7,8 @@ import {
   createMonthStyles,
 } from './styles';
 import WeekDayItem from './WeekDayItem';
-import { ReactComponent as BackArrowIcon } from './backIcon.svg';
-import { ReactComponent as ForwardArrowIcon } from './forwardIcon.svg';
+import { ReactComponent as BackArrowIcon } from '../../icons/backIcon.svg';
+import { ReactComponent as ForwardArrowIcon } from '../../icons/forwardIcon.svg';
 import { getDatesOfWeek } from '../../../common/utils';
 
 const Wrapper = styled(Stack)(createWrapperStyles);

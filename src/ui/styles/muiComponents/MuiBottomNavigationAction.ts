@@ -4,13 +4,21 @@ import { OwnerStateWithTheme } from '../../../common/types';
 const MuiBottomNavigationAction = {
   styleOverrides: {
     root: ({
-      theme: { palette },
+      theme: {
+        palette: { text, secondary },
+      },
     }: OwnerStateWithTheme<BottomNavigationActionProps>) => ({
-      color: palette.text.secondary,
+      color: text.secondary,
       fontSize: '48px',
 
       '&.Mui-selected': {
-        color: palette.secondary.main,
+        color: secondary.main,
+
+        svg: {
+          path: {
+            fill: secondary.main,
+          },
+        },
       },
     }),
   },
