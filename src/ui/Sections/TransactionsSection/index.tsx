@@ -2,7 +2,7 @@ import { Stack } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { getExpenses } from '../../../redux/slices/expensesSlice';
 import SectionLayout from '../../layouts/SectionLayout';
-import ExpenseCard from '../ExpenseCard';
+import ExpenseCard from '../../components/ExpenseCard';
 
 const TransactionsSection = () => {
   const expenses = useSelector(getExpenses);

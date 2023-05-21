@@ -1,6 +1,6 @@
 import SectionLayout from '../../layouts/SectionLayout';
-import Chart from '../Chart';
-import ChooseYearButton from '../ChooseYearButton';
+import Chart from '../../components/Chart';
+import ChooseYearButton from '../../components/ChooseYearButton';
 
 const AnalyticsSection = () => {
   return (
