@@ -55,6 +55,10 @@ const getDatesOfWeek = (startOfWeek: Dayjs): DatesOfWeek => {
 const getAmount = (strAmount: string): number =>
   Number(strAmount.replace(',', ''));
 
+const sortByDate = (array: { date: string }[]) => {
+  return array.sort((a, b) => (dayjs(a.date).isBefore(dayjs(b.date)) ? 1 : -1));
+};
+
 export {
   createSelector,
   getHeaderByUrl,
@@ -62,4 +66,5 @@ export {
   handleChange,
   getDatesOfWeek,
   getAmount,
+  sortByDate,
 };

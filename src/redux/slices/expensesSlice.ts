@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { expensesMock } from '../../common/mocks';
-import { createSelector } from '../../common/utils';
+import { createSelector, sortByDate } from '../../common/utils';
 
 export interface Expense {
   id: string;
@@ -19,6 +19,8 @@ const expensesSlice = createSlice({
   reducers: {
     addExpenses(state: Expenses, action: PayloadAction<Expenses>) {
       state.push(...action.payload);
+
+      sortByDate(state);
     },
     deleteExpense(state: Expenses, action: PayloadAction<string>) {
       const deletingId = action.payload;
